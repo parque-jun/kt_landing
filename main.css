@@ -1,0 +1,145 @@
+/* 기본 초기화 및 폰트 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. 헤더 스타일 */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 24px 40px;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+.logo-kt {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff3344;
+}
+.logo-tech {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav a {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.nav a:hover {
+    opacity: 1;
+}
+
+.nav-apply {
+    font-weight: 600 !important;
+    opacity: 1 !important;
+}
+
+
+/* 2. 히어로 섹션 */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    min-height: 600px;
+    /* 새로 첨부해주신 Background.jpg로 배경 지정 */
+    background: url('../Background.jpg') no-repeat center center / cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* 이미지가 이미 어두운 톤이므로, 글자 뒤에만 은은하게 그림자 효과를 주는 오버레이로 변경 */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 배경을 살짝만 눌러줘서 글자가 더 잘 띄게 합니다 */
+    z-index: 1;
+}
+
+/* 메인 콘텐츠 */
+.hero-content {
+    position: relative;
+    z-index: 2; 
+    max-width: 850px;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+    /* 글자 자체에도 은은한 그림자를 주어 가독성 극대화 */
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.hero-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 48px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 버튼 (CTA) */
+.btn-cta {
+    display: inline-block;
+    padding: 16px 80px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px); /* 버튼 내부를 살짝 흐리게 만들어 고급스러운 느낌 추가 */
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #fff;
+    color: #000;
+}
